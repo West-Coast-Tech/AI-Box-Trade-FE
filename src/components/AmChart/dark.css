@@ -1,0 +1,155 @@
+.chart-container {
+    display: flex;
+}
+.chart-area {
+    width: 100%;
+}
+#chartdiv {
+    width: 100%;
+    height: 26rem;
+    background-color: rgb(14, 23, 38);
+}
+@media only screen and (max-width: 640px) {
+    #chartdiv {
+        height: 54vh;
+    }
+}
+#drawing-tools {
+    position: absolute;
+    left: -10px;
+    background-color: #04030e;
+    border: 0.1rem solid white;
+    border-radius: 0.4rem;
+    overflow-y: auto;
+    max-height: 20rem;
+}
+#drawing-tools::-webkit-scrollbar {
+    width: 6px; /* Make the scrollbar thinner */
+}
+
+#drawing-tools::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#drawing-tools::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker on hover */
+}
+
+#drawing-tools::-webkit-scrollbar-track {
+    background-color: #2d2d2d; /* Match background */
+    border-radius: 10px;
+}
+/* Button Styles */
+#drawing-tools button {
+    background: transparent;
+    border-radius: 10px;
+    margin: 0;
+    height: 2rem;
+    width: 2rem;
+    transition: background-color 0.3s;
+}
+
+#drawing-tools button:hover {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#drawing-tools li {
+    border-radius: 8px;
+}
+
+#drawing-tools i {
+    color: #d1d4dc;
+    font-size: 1.3rem;
+}
+
+#fullscreen-toggle {
+    position: relative;
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+/* Chart Controls Styles */
+#chartcontrols {
+    z-index: 5;
+}
+#chartcontrols .am5stock-control-button {
+    border: 0;
+    color: #848e9c;
+}
+#chartcontrols .am5stock-control-list .am5stock-list-heading label {
+    color: white;
+}
+#chartcontrols .am5stock-control-button:hover,
+#chartcontrols .am5stock-link:hover {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#chartcontrols .am5stock-active {
+    background-color: transparent;
+    color: #eaecef;
+}
+
+#chartcontrols .am5stock-control-list {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #222;
+}
+#chartcontrols .am5stock-control-list :hover {
+    cursor: pointer;
+}
+#chartcontrols .am5stock-list-search {
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+#chartcontrols .am5stock-list-search input {
+    border-radius: 20px;
+}
+
+#chartdiv .am5-modal-content {
+    box-shadow: 0 0 3px 0;
+}
+
+#chartdiv .am5stock-list-heading li div label,
+#chartdiv .am5stock-list-info label {
+    color: #eaecef;
+}
+
+/* Fullscreen Styles */
+:fullscreen::backdrop {
+    background: white;
+}
+
+/* Drawing Control Settings Panel */
+#drawControlSettings {
+    display: none;
+    background-color: transparent;
+    /* margin-top: 10px; */
+}
+
+#lineColor {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 2.25rem;
+    height: 1.55rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#lineColor::-webkit-color-swatch {
+    border-radius: 0.38rem;
+    border: none;
+}
+
+#lineColor::-moz-color-swatch {
+    border-radius: 0.938rem;
+    border: none;
+}

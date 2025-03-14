@@ -1,0 +1,127 @@
+.chart-container {
+    display: flex;
+}
+.chart-area {
+    width: 100%;
+}
+#chartdiv {
+    width: 100%;
+    height: 26rem;
+    background-color: rgb(255, 255, 255);
+}
+
+#drawing-tools {
+    position: absolute;
+    left: -10px;
+    background-color: #f9f9f9; /* Lighter background for light theme */
+    border: 0.1rem solid black; /* Changed border color to black */
+    border-radius: 0.4rem;
+}
+
+/* Button Styles */
+#drawing-tools button {
+    background: transparent;
+    border-radius: 10px;
+    margin: 0;
+    height: 2rem;
+    width: 2rem;
+    transition: background-color 0.3s;
+}
+
+#drawing-tools button:hover {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#drawing-tools li {
+    border-radius: 8px;
+}
+
+#drawing-tools i {
+    color: #000000; /* Changed icon color to black */
+    font-size: 1.3rem;
+}
+
+#fullscreen-toggle {
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    color: black; /* Changed text color to black */
+}
+
+/* Chart Controls Styles */
+
+#chartcontrols .am5stock-control-button {
+    border: 0;
+    color: #000000; /* Changed control button color to black */
+}
+
+#chartcontrols .am5stock-control-button:hover,
+#chartcontrols .am5stock-link:hover {
+    cursor: pointer;
+    background-color: transparent; /* Lighter hover background color */
+}
+
+#chartcontrols .am5stock-active {
+    background-color: #e0e0e0; /* Active button background for light theme */
+    color: #000000; /* Changed active button color to black */
+}
+
+#chartcontrols .am5stock-control-list {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #ccc; /* Lighter scrollbar colors */
+}
+
+#chartcontrols .am5stock-list-search {
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+#chartcontrols .am5stock-list-search input {
+    border-radius: 20px;
+}
+
+/* #chartdiv .am5-modal-content {
+    box-shadow: 0 0 3px 0;
+  } */
+
+#chartdiv .am5stock-list-heading li div label,
+#chartdiv .am5stock-list-info label {
+    color: #000000; /* Changed label color to black */
+}
+
+/* Fullscreen Styles */
+:fullscreen::backdrop {
+    background: black; /* Changed fullscreen backdrop to black for contrast */
+}
+
+/* Drawing Control Settings Panel */
+#drawControlSettings {
+    display: none;
+    background-color: transparent;
+    /* margin-top: 10px; */
+}
+
+/*Change styling of input line color*/
+#style1 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 2.25rem;
+    height: 1.55rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#style1::-webkit-color-swatch {
+    border-radius: 0.38rem;
+    border: none;
+}
+
+#style1::-moz-color-swatch {
+    border-radius: 0.938rem;
+    border: none;
+}

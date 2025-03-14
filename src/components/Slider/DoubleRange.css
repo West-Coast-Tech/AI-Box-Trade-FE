@@ -1,0 +1,79 @@
+/* DoubleRange.css */
+
+/* Common to remove default input styles */
+.range-thumb {
+    -webkit-appearance: none; /* Safari/Chrome */
+    -moz-appearance: none; /* Firefox */
+    appearance: none;
+    background: transparent; /* No default background */
+    border: none;
+    outline: none;
+    user-select: none; /* Prevent text highlight on drag */
+}
+
+/* Remove track background in various browsers */
+.range-thumb::-webkit-slider-runnable-track {
+    height: 1px;
+    background: transparent;
+    border: none;
+}
+
+.range-thumb::-moz-range-track {
+    height: 1px;
+    background: transparent;
+    border: none;
+}
+
+.range-thumb::-ms-track {
+    height: 1px;
+    background: transparent;
+    border: none;
+    color: transparent; /* Hide default lines/ticks if any */
+}
+
+/* Remove fill-lower/fill-upper for IE/Edge */
+.range-thumb::-ms-fill-lower,
+.range-thumb::-ms-fill-upper {
+    background: transparent;
+    border: none;
+}
+
+/* Hide default focus outlines (if any) */
+.range-thumb:focus {
+    outline: none;
+}
+
+/* Thumb styling for WebKit-based browsers (Chrome, Safari, etc.) */
+.range-thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    margin-top: -8px; /* Align the thumb with the track (1px high track) */
+    background: #2563eb; /* Tailwind's 'blue-600' shade or any color */
+    border-radius: 9999px; /* fully round */
+    border: 2px solid #fff; /* white border */
+    box-shadow: none; /* remove any default shadow */
+    cursor: pointer;
+}
+
+/* Thumb styling for Firefox */
+.range-thumb::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    background: #2563eb;
+    border-radius: 9999px;
+    border: 2px solid #fff;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+/* Thumb styling for IE/Edge */
+.range-thumb::-ms-thumb {
+    height: 16px;
+    width: 16px;
+    background: #2563eb;
+    border-radius: 9999px;
+    border: 2px solid #fff;
+    box-shadow: none;
+    cursor: pointer;
+}
