@@ -20,6 +20,7 @@ import SymbolBar from '../SymbolBar';
 import { marketOpeningTime } from '../MarketCountdownTimer';
 const SERVER_IP = import.meta.env.VITE_SERVER_IP || 'localhost';
 const WebSocketProtocol = import.meta.env.VITE_WEBSOCKET_PROTOCOL || 'ws';
+const HttpProtocol = import.meta.env.VITE_HTTP_PROTOCOL || 'http';
 const selectSymbols = (state: AppState) => state.symbols.selectedSymbol;
 // const selectTrades = (state: AppState) => state.trades.allTrades;
 interface IncrementalChartProps {
@@ -519,7 +520,7 @@ const IncrementalChart: React.FC<IncrementalChartProps> = ({ showSymbolBar = tru
                 // Round the `min` to the nearest interval and adjust it
                 min = am5.time.round(new Date(min), interval as TimeUnit, 1).getTime();
 
-                const url = `http://${SERVER_IP}:8081/tradingData`;
+                const url = `${HttpProtocol}://${SERVER_IP}/tradingData`;
                 const params = {
                     symbol: currentSymbol?.symbol || 'BUFF',
                     interval: interval,
