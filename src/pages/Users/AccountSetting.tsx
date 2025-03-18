@@ -18,8 +18,7 @@ import { DangerZone } from '../../components/AccountSettingsTabs/DangerZone';
 import { updateUser } from '../../redux/actions/userActions';
 import { hashPassword } from '../../services/auth';
 import { changePassword } from '../../redux/actions/authActions';
-import { countries } from '../Authentication/RegisterCover';
-
+import { countries } from '../Authentication/countrylist';
 const selectUser = (state: AppState) => state.user.currentUser;
 
 const AccountSetting = () => {
