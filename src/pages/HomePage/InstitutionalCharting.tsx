@@ -1,4 +1,5 @@
 import IncrementalChart from '../../components/AmChart/IncrementalChart';
+import TradingViewWidget from '../../components/TradingView/TradingViewWidget';
 import charts from '/assets/images/homepage/JPcharts-2048x1530.webp';
 
 const InstitutionalCharting = () => {
@@ -6,14 +7,16 @@ const InstitutionalCharting = () => {
         <section className="bg-s-to-br from-gray-300  via-gray-100 to-gray-200  dark:from-blue-950 dark:via-black/95 dark:to-black/95 dark:text-white-dark py-16  rounded-lg mt-10">
             <div className="mx-auto text-center">
                 <h2 className="text-3xl sm:text-5xl font-bold mb-6 dark:text-white ">
-                    Institutional Grade <span className="text-blue-500">Charting</span>
+                    Explore <span className="text-blue-500">Companies</span>
                 </h2>
             </div>
 
             {/* Image Container */}
             <div className="flex flex-col items-center">
-                <div className="w-full  overflow-hidden rounded-lg shadow-lg panel">
-                    <IncrementalChart />
+                <div className="w-full h-[70vh]  overflow-hidden rounded-lg shadow-lg panel">
+                    {/* <IncrementalChart /> */}
+
+                    <TradingViewWidget />
                 </div>
             </div>
 

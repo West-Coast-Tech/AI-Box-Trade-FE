@@ -199,20 +199,22 @@ const Header = () => {
                         </ul>
                     </div> */}
                     <div className="sm:flex-1 ltr:sm:ml-0 ltr:ml-auto sm:rtl:mr-0 rtl:mr-auto flex items-center space-x-1.5 lg:space-x-2 rtl:space-x-reverse dark:text-[#d0d2d6]">
-                        <div className="w-full justify-center flex">
-                            <SearchSymbol />
-                        </div>
-                        <div className="hidden lg:block">
-                            {user && id ? (
-                                <div className="text-nowrap">
-                                    {user.subscriptionStatus != 'trial' && user.subscriptionStatus != 'active' && isAuthenticated && <StartTrialButton userId={id} plan="full" />}
-                                    {/* <DirectSubscriptionButton userId={localStorage.getItem('id') || ''} plan="basic" /> */}
-                                </div>
-                            ) : (
-                                <NavLink to="/auth/cover-register" className="btn btn-info text-nowrap">
-                                    Start 7-Day Free Trial
-                                </NavLink>
-                            )}
+                        <div className="flex flex-row w-full justify-start ">
+                            <div className="w-3/4 justify-center flex">
+                                <SearchSymbol />
+                            </div>
+                            <div className="hidden lg:flex ">
+                                {user && id ? (
+                                    <div className="text-nowrap">
+                                        {user.subscriptionStatus != 'trial' && user.subscriptionStatus != 'active' && isAuthenticated && <StartTrialButton userId={id} plan="full" />}
+                                        {/* <DirectSubscriptionButton userId={localStorage.getItem('id') || ''} plan="basic" /> */}
+                                    </div>
+                                ) : (
+                                    <NavLink to="/auth/cover-register" className="btn btn-info text-nowrap">
+                                        Start 7-Day Free Trial
+                                    </NavLink>
+                                )}
+                            </div>
                         </div>
                         <div className="w-[35%] hidden scale-75 lg:scale-100 md:flex">
                             <CountdownTimer />

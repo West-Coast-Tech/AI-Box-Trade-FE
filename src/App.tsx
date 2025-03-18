@@ -27,10 +27,8 @@ function App({ children }: PropsWithChildren) {
         dispatch(toggleSemidark(localStorage.getItem('semidark') || themeConfig.semidark));
     }, [dispatch, themeConfig.theme, themeConfig.menu, themeConfig.layout, themeConfig.rtlClass, themeConfig.animation, themeConfig.navbar, themeConfig.locale, themeConfig.semidark]);
     useEffect(() => {
-        if (isAuthenticated) {
-            dispatch(fetchSymbols());
-        }
-    }, [isAuthenticated]);
+        dispatch(fetchSymbols());
+    }, []);
     return (
         <div
             className={`${(store.getState().themeConfig.sidebar && 'toggle-sidebar') || ''} ${themeConfig.menu} ${themeConfig.layout} ${

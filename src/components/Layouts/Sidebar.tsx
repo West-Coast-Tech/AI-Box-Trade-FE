@@ -134,7 +134,8 @@ const SidebarMenu: React.FC = () => {
                                 {item.to ? (
                                     <NavLink to={hasAccess(item.plan, currentUser) ? item.to : reRouteLink} className="nav-link flex items-center p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-800">
                                         {item.icon}
-                                        <span className="ltr:pl-3 rtl:pr-3">{item.title}</span>
+                                        <span className="pl-3 ">{item.title}</span>
+
                                         {!hasAccess(item.plan, currentUser) && <IconLock className="!text-yellow-600 !w-4 ml-auto" fill={true} />}
                                     </NavLink>
                                 ) : (

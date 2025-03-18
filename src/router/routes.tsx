@@ -37,6 +37,7 @@ const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 //Stripe
 const TrialSuccess = lazy(() => import('../pages/Stripe/TrialSuccess'));
 const SubscriptionSuccess = lazy(() => import('../pages/Stripe/SubscriptionSuccess'));
+const AccountSetting = lazy(() => import('../pages/Users/AccountSetting'));
 import {
     HighVolumeTable,
     HotStocksTable,
@@ -121,7 +122,11 @@ const routes = [
         element: <Profile />,
         protected: true,
     },
-
+    {
+        path: '/users/settings',
+        element: <AccountSetting />,
+        protected: true,
+    },
     // Calendar pages
     {
         path: '/pages/dividend-calendar',

@@ -13,7 +13,7 @@ import { BalanceSheet } from './BalanceSheet';
 import { CashflowStatement } from './CashflowStatement';
 // import StockChartWidget from './StockChartWidget';
 const StockChartWidget = lazy(() => import('./StockAreaChartWidget'));
-
+import TradingViewWidget from '../../components/TradingView/TradingViewWidget';
 const StockPage = () => {
     let { symbol } = useParams();
     const [latestData, setLatestData] = useState();
@@ -157,8 +157,10 @@ const StockPage = () => {
 
                 {/* Chart and relevant data */}
                 <div className="panel col-span-1 md:col-span-4 xl:col-span-6 h-full">
-                    <IncrementalChart showSymbolBar={false} />
-
+                    {/* <IncrementalChart showSymbolBar={false} /> */}
+                    <div className="h-[70%]">
+                        <TradingViewWidget />
+                    </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-4 text-sm pt-4 rounded-lg space-x-3 [&>*]:border-b [&>*]:border-dashed  [&>*]:border-gray-600 ">
                         <div className="flex justify-between ml-3">
                             <h3 className="font-bold text-base">Previous Close</h3>

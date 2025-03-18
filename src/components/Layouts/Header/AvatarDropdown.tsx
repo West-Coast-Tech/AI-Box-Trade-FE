@@ -41,6 +41,12 @@ export const AvatarDropdown: React.FC<AvatarDropdownProps> = ({ user }) => {
                             Profile
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/users/settings" className="dark:hover:text-white">
+                            <IconUser className="w-4.5 h-4.5 ltr:mr-2 rtl:ml-2 shrink-0" />
+                            Account Settings
+                        </Link>
+                    </li>
                     {/* <li>
                                         <Link to="/apps/mailbox" className="dark:hover:text-white">
                                             <IconMail className="w-4.5 h-4.5 ltr:mr-2 rtl:ml-2 shrink-0" />
