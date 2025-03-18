@@ -15,7 +15,7 @@ export interface AuthState {
 
 const initialState: AuthState = {
     token: localStorage.getItem('token'),
-    isAuthenticated: !!localStorage.getItem('token'),
+    isAuthenticated: !!localStorage.getItem('token') && !!localStorage.getItem('id'),
     id: localStorage.getItem('id'), // Initialize with value from localStorage
     currentUser: null,
     otpToken: null,

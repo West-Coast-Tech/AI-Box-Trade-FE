@@ -46,13 +46,15 @@ const Finance = () => {
                                 <div className="flex flex-col md:flex-row w-full justify-between ">
                                     <div className="flex items-center">
                                         <div
-                                            className="ltr:mr-1 rtl:ml-1 flex items-center underline-animation text-lg font-semibold  cursor-pointer  hover:scale-[1.02] transition-all duration-700"
+                                            className="ltr:mr-1 rtl:ml-1 flex items-center text-lg font-semibold  cursor-pointer  hover:scale-[1.02] transition-all duration-700"
                                             onClick={() => {
                                                 navigate(`/pages/stocks/${currentSymbol?.symbol}`);
                                             }}
                                         >
                                             <img width={40} src={currentSymbol?.iconUrl} className="p-1 mr-2 rounded-3xl" />
-                                            {currentSymbol?.name} ({currentSymbol?.symbol})
+                                            <h4 className="underline-animation ">
+                                                {currentSymbol?.name} ({currentSymbol?.symbol})
+                                            </h4>
                                         </div>
                                         {/* <IconArrowLeft className={`mb-px ml-3 ${true ? '-rotate-90 text-success' : 'rotate-90 text-danger'}`} /> */}
                                         {/* <div className={`font-medium text-sm mb-px ${true ? ' text-success' : ' text-danger'}`}>+3.39%</div> */}

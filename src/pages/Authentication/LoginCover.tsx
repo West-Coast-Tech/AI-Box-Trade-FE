@@ -18,7 +18,7 @@ import { verifyOtp } from '../../redux/actions/authActions';
 import { AppState } from '../../redux/types';
 import { hashPassword } from '../../services/auth';
 import IconInfoCircle from '../../components/Icon/IconInfoCircle';
-import logo from '../../../public/assets/images/logo/logo-white-200x.png';
+import logo from '/assets/images/logo/logo-white-200x.png';
 
 const LoginCover = () => {
     const [email, setEmail] = useState('');

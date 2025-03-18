@@ -7,6 +7,7 @@ interface Plan {
     features: string[];
     monthlyPrice: number;
     buttonVariant: 'dark' | 'primary';
+    type: 'free' | 'basic' | 'full';
 }
 
 const plans: Plan[] = [
@@ -16,6 +17,7 @@ const plans: Plan[] = [
         features: ['12+ Screeners', '7 Box Rule', 'Design Portfolio', 'Analyst Rating', 'Top Sector Picks', 'Stock Filters', 'Watch List', 'User Holdings'],
         monthlyPrice: 0,
         buttonVariant: 'dark',
+        type: 'free',
     },
     {
         title: 'Pro Plan',
@@ -23,6 +25,7 @@ const plans: Plan[] = [
         features: ['Limited Screeners', '7 Box Rule', 'Analyst Rating', 'Top Sector Picks', 'Watch List', 'User Holdings'],
         monthlyPrice: 39.99,
         buttonVariant: 'primary',
+        type: 'basic',
     },
     {
         title: 'Elite Plan',
@@ -30,6 +33,7 @@ const plans: Plan[] = [
         features: ['12+ Screeners', '7 Box Rule', 'Design Portfolio', 'Analyst Rating', 'Top Sector Picks', 'Stock Filters', 'Watch List', 'User Holdings'],
         monthlyPrice: 59.99,
         buttonVariant: 'dark',
+        type: 'full',
     },
 ];
 
@@ -97,13 +101,13 @@ export const PricingTable: React.FC = () => {
                                         </ul>
                                     </div>
                                     <div>
-                                        {plan.monthlyPrice == 0 ? (
+                                        {plan.type == 'free' ? (
                                             <button type="button" className="btn btn-dark w-full cursor-default">
                                                 Free Tier
                                             </button>
                                         ) : (
                                             <button type="button" className="w-full">
-                                                <DirectSubscriptionButton userId={localStorage.getItem('id') || ''} plan={plan.monthlyPrice == 20 ? 'basic' : 'full'} />
+                                                <DirectSubscriptionButton userId={localStorage.getItem('id') || ''} plan={plan.type} />
                                             </button>
                                         )}
                                     </div>
