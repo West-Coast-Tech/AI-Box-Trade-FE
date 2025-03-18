@@ -103,7 +103,7 @@ export const PricingTable: React.FC = () => {
                                     <div>
                                         {plan.type == 'free' ? (
                                             <button type="button" className="btn btn-dark w-full cursor-default">
-                                                Free Tier
+                                                Free Tir
                                             </button>
                                         ) : (
                                             <button type="button" className="w-full">
