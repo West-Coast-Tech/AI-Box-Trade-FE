@@ -25,7 +25,7 @@ const CountdownTimer: React.FC = () => {
                     Authorization: `Bearer ${BEARER_TOKEN}`,
                 },
             });
-
+            console.log('Market Cooldown', response);
             if (!response.ok) {
                 throw new Error('Failed to fetch market data');
             }
@@ -47,7 +47,7 @@ const CountdownTimer: React.FC = () => {
             const dateStringWithoutTimezone = dateString.replace(' ET', '');
             // Parse and convert to UTC
             const parsedDate = parse(dateStringWithoutTimezone, 'MMM d, yyyy hh:mm a', new Date());
-            const openingTime = new Date(parsedDate + 'GMT-0500');
+            const openingTime = new Date(parsedDate + 'GMT-0400');
             setTargetTime(openingTime);
         }
     }, [marketInfo]);

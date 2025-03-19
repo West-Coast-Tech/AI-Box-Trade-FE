@@ -13,7 +13,8 @@ const ERROR503 = lazy(() => import('../pages/Pages/Error503'));
 const Maintenence = lazy(() => import('../pages/Pages/Maintenence'));
 const LoginCover = lazy(() => import('../pages/Authentication/LoginCover'));
 const RegisterCover = lazy(() => import('../pages/Authentication/RegisterCover'));
-const RecoverIdCover = lazy(() => import('../pages/Authentication/RecoverIdCover'));
+const ForgotPassword = lazy(() => import('../pages/Authentication/ForgotPassword'));
+const ChangePassword = lazy(() => import('../pages/Authentication/ChangePassword'));
 const Error = lazy(() => import('../components/Error'));
 const Gainers = lazy(() => import('../pages/Screeners/Gainers'));
 const Losers = lazy(() => import('../pages/Screeners/Losers'));
@@ -374,8 +375,12 @@ const routes = [
     },
 
     {
-        path: '/auth/cover-password-reset',
-        element: <RecoverIdCover />,
+        path: '/auth/cover-forgot-password',
+        element: <ForgotPassword />,
+    },
+    {
+        path: '/auth/cover-change-password',
+        element: <ChangePassword />,
     },
 
     {

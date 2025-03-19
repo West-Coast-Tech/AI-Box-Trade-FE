@@ -42,7 +42,7 @@ const DirectSubscriptionButton: React.FC<DirectSubscriptionButtonProps> = ({ use
     };
     return (
         <button onClick={handleOnClick} className="btn btn-primary w-full">
-            Subscribe Now ({plan})
+            Subscribe Now
         </button>
     );
 };

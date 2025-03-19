@@ -17,10 +17,10 @@ interface VerifyOtpProps {
     resendAction: (payload: any) => any;
     message: string;
     resendPayload: any;
-    otpType?: 'login' | 'register';
+    verifyType?: 'login' | 'register' | 'password-reset';
 }
 
-const VerifyOtp: React.FC<VerifyOtpProps> = ({ verifyAction, resendAction, message, resendPayload, otpType }) => {
+const VerifyOtp: React.FC<VerifyOtpProps> = ({ verifyAction, resendAction, message, resendPayload, verifyType }) => {
     const dispatch = useDispatch<any>();
     const { otpToken, loading, error } = useSelector((state: AppState) => state.auth);
     const [trialUserId, setTrialUserId] = useState();
@@ -74,10 +74,12 @@ const VerifyOtp: React.FC<VerifyOtpProps> = ({ verifyAction, resendAction, messa
             const id = await dispatch(verifyAction(payload));
 
             // await dispatch(getUserData());
-            if (otpType === 'login' || !otpType) {
+            if (verifyType === 'login' || !verifyType) {
                 navigate('/dashboard');
-            } else if (otpType === 'register') {
+            } else if (verifyType === 'register') {
                 setTrialUserId(id);
+            } else if (verifyType === 'password-reset') {
+                navigate('/auth/cover-change-password');
             }
         } catch (error) {
             console.error('Error verifying OTP', error);

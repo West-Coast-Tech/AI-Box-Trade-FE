@@ -9,8 +9,10 @@ import IconMail from '../../components/Icon/IconMail';
 import IconPhoneCall from '../../components/Icon/IconPhoneCall';
 import IconPencil from '../../components/Icon/IconPencil';
 import IconMessageDots from '../../components/Icon/IconMessageDots';
+import useScrollToTop from '../../customHooks/useScrollToTop';
 
 const ContactUsBoxed = () => {
+    useScrollToTop();
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(setPageTitle('Contact Us Boxed'));

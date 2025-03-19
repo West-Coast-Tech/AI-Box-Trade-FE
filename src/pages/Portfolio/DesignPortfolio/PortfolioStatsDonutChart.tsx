@@ -41,8 +41,7 @@ export const PortfolioStatsDonutChart: React.FC<PortfolioStatsDonutChartProps> =
             horizontalAlign: 'center', // Center align
             fontSize: '13px', // Smaller font size
             markers: {
-                width: 8, // Smaller markers
-                height: 8,
+                strokeWidth: 0, // Smaller markers
                 offsetX: -2,
             },
             itemMargin: {
@@ -82,13 +81,11 @@ export const PortfolioStatsDonutChart: React.FC<PortfolioStatsDonutChartProps> =
             hover: {
                 filter: {
                     type: 'none',
-                    value: 0.15,
                 },
             },
             active: {
                 filter: {
                     type: 'none',
-                    value: 0.15,
                 },
             },
         },

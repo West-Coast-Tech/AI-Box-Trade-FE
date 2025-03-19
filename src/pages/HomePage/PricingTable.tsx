@@ -10,7 +10,7 @@ interface Plan {
     type: 'free' | 'basic' | 'full';
 }
 
-const plans: Plan[] = [
+export const plans: Plan[] = [
     {
         title: 'Premium Access',
         description: '7 - Day Trial',
@@ -103,7 +103,7 @@ export const PricingTable: React.FC = () => {
                                     <div>
                                         {plan.type == 'free' ? (
                                             <button type="button" className="btn btn-dark w-full cursor-default">
-                                                Free Tir
+                                                7 - Day Trial
                                             </button>
                                         ) : (
                                             <button type="button" className="w-full">

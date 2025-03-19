@@ -146,7 +146,12 @@ export const changePassword = (oldPassword: string, newPassword: string) => asyn
             newPassword,
         };
         const response = await API.changePassword(token, payload);
+        if (response.status !== 200) {
+            console.error('Error changing password', response.data);
+            throw new Error('Error changing password');
+        }
     } catch (error) {
         console.error('Error changing password', error);
+        throw new Error('Error changing password');
     }
 };

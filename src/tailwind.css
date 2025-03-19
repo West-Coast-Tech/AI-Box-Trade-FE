@@ -719,8 +719,8 @@ pre.hljs {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 0.5px;
-    background-color: #9a9a9a; /* Color of the underline */
+    height: 2px;
+    background-color: #bfc9d4; /* Color of the underline */
     transition: width 0.4s ease-in-out; /* Animation duration and easing */
 }
 

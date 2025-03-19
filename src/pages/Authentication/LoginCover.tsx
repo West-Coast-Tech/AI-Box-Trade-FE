@@ -170,6 +170,11 @@ const LoginCover = () => {
                                             </span>
                                         </div>
                                     </div>
+                                    <div className="text-center dark:text-white">
+                                        <Link to="/auth/cover-forgot-password" className="uppercase text-primary underline transition hover:text-black dark:hover:text-white">
+                                            Forgot Password ?
+                                        </Link>
+                                    </div>
                                     <div>
                                         <label className="flex cursor-pointer items-center">
                                             <input type="checkbox" className="form-checkbox bg-white dark:bg-black" />

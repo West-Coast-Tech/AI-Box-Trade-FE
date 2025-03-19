@@ -95,8 +95,7 @@ const StockAnalystRating: React.FC = () => {
             horizontalAlign: 'center',
             fontSize: '14px',
             markers: {
-                width: 10,
-                height: 10,
+                strokeWidth: 0,
                 offsetX: -2,
             },
             height: 50,
@@ -141,13 +140,11 @@ const StockAnalystRating: React.FC = () => {
             hover: {
                 filter: {
                     type: 'none',
-                    value: 0.15,
                 },
             },
             active: {
                 filter: {
                     type: 'none',
-                    value: 0.15,
                 },
             },
         },

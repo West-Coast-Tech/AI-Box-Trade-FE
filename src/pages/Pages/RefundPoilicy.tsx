@@ -1,6 +1,8 @@
 import React from 'react';
+import useScrollToTop from '../../customHooks/useScrollToTop';
 
 const RefundPolicy: React.FC = () => {
+    useScrollToTop();
     return (
         <div className="max-w-5xl mx-auto p-8 space-y-8">
             <h1 className="text-4xl font-bold text-center mb-8">Refund Policy</h1>

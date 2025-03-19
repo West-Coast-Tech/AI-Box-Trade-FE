@@ -12,8 +12,10 @@ import IconDollarSignCircle from '../../components/Icon/IconDollarSignCircle';
 import IconRouter from '../../components/Icon/IconRouter';
 import IconPlusCircle from '../../components/Icon/IconPlusCircle';
 import IconMinusCircle from '../../components/Icon/IconMinusCircle';
+import useScrollToTop from '../../customHooks/useScrollToTop';
 
 const Faq = () => {
+    useScrollToTop();
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(setPageTitle('FAQ'));

@@ -261,7 +261,7 @@ const RegisterCover = () => {
                                 </div>
                             </div>
                         ) : (
-                            <VerifyOtp verifyAction={verifyRegisterOtp} resendAction={registerUser} resendPayload={resendPayload} message="Check your email for the otp" otpType="register" />
+                            <VerifyOtp verifyAction={verifyRegisterOtp} resendAction={registerUser} resendPayload={resendPayload} message="Check your email for the otp" verifyType="register" />
                         )}
                         <p className="absolute bottom-6 w-full text-center dark:text-white">© {new Date().getFullYear()}.AI Box Trade All Rights Reserved.</p>
                     </div>

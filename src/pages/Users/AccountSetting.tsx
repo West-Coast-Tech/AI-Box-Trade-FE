@@ -12,13 +12,15 @@ import IconFacebook from '../../components/Icon/IconFacebook';
 import IconGithub from '../../components/Icon/IconGithub';
 import { AppState } from '../../redux/types';
 import IconLockDots from '../../components/Icon/IconLockDots';
-import { PaymentDetails } from '../../components/AccountSettingsTabs/PaymentDetails';
 import { Preferences } from '../../components/AccountSettingsTabs/Preferences';
 import { DangerZone } from '../../components/AccountSettingsTabs/DangerZone';
 import { updateUser } from '../../redux/actions/userActions';
 import { hashPassword } from '../../services/auth';
 import { changePassword } from '../../redux/actions/authActions';
 import { countries } from '../Authentication/countrylist';
+import ContactUsBoxed from '../Pages/ContactUsBoxed';
+import Profile from './Profile';
+import Payment from '../../components/AccountSettingsTabs/Payment';
 const selectUser = (state: AppState) => state.user.currentUser;
 
 const AccountSetting = () => {
@@ -114,7 +116,7 @@ const AccountSetting = () => {
                                 className={`flex gap-2 p-4 border-b border-transparent hover:border-primary hover:text-primary ${tabs === 'home' ? '!border-primary text-primary' : ''}`}
                             >
                                 <IconHome />
-                                Home
+                                Account Settings
                             </button>
                         </li>
                         <li className="inline-block">
@@ -123,10 +125,19 @@ const AccountSetting = () => {
                                 className={`flex gap-2 p-4 border-b border-transparent hover:border-primary hover:text-primary ${tabs === 'payment-details' ? '!border-primary text-primary' : ''}`}
                             >
                                 <IconDollarSignCircle />
-                                Payment Details
+                                Payment
                             </button>
                         </li>
                         <li className="inline-block">
+                            <button
+                                onClick={() => toggleTabs('contact-us')}
+                                className={`flex gap-2 p-4 border-b border-transparent hover:border-primary hover:text-primary ${tabs === 'contact-us' ? '!border-primary text-primary' : ''}`}
+                            >
+                                <IconPhone />
+                                Support
+                            </button>
+                        </li>
+                        {/* <li className="inline-block">
                             <button
                                 onClick={() => toggleTabs('preferences')}
                                 className={`flex gap-2 p-4 border-b border-transparent hover:border-primary hover:text-primary ${tabs === 'preferences' ? '!border-primary text-primary' : ''}`}
@@ -134,8 +145,8 @@ const AccountSetting = () => {
                                 <IconUser className="w-5 h-5" />
                                 Preferences
                             </button>
-                        </li>
-                        <li className="inline-block">
+                        </li> */}
+                        {/* <li className="inline-block">
                             <button
                                 onClick={() => toggleTabs('danger-zone')}
                                 className={`flex gap-2 p-4 border-b border-transparent hover:border-primary hover:text-primary ${tabs === 'danger-zone' ? '!border-primary text-primary' : ''}`}
@@ -143,12 +154,12 @@ const AccountSetting = () => {
                                 <IconPhone />
                                 Danger Zone
                             </button>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 {tabs === 'home' && (
                     <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-                        <form className="border col-span-1 border-[#ebedf2] dark:border-[#191e3a] rounded-md p-4 mb-5 bg-white dark:bg-black" onSubmit={handleSubmit}>
+                        <form className="border col-span-1 relative border-[#ebedf2] dark:border-[#191e3a] rounded-md p-4 bg-white dark:bg-black" onSubmit={handleSubmit}>
                             <h6 className="text-lg font-bold mb-5">General Information</h6>
 
                             <div className="flex flex-col sm:flex-row">
@@ -188,14 +199,12 @@ const AccountSetting = () => {
                                 </div>
                             </div>
                         </form>
-                        <form className="border col-span-1 border-[#ebedf2] dark:border-[#191e3a] rounded-md p-4 bg-white dark:bg-black" onSubmit={handleChangePassword}>
+                        <form className="border relative col-span-1 border-[#ebedf2] dark:border-[#191e3a] rounded-md p-4 bg-white dark:bg-black" onSubmit={handleChangePassword}>
                             <h6 className="text-lg font-bold mb-5">Update Password</h6>
 
-                            <div className="grid grid-cols-1 gap-4">
-                                <div className="grid grid-cols-3">
-                                    <div className="bg-[#eee] flex justify-center items-center rounded px-3 pt-1 font-semibold dark:bg-[#1b2e4b] ltr:mr-2 rtl:ml-2">
-                                        <label htmlFor="OldPassword">Old Password</label>
-                                    </div>
+                            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                                <div>
+                                    <label htmlFor="OldPassword">Old Password</label>
                                     <div className="relative text-white-dark">
                                         <input
                                             id="OldPassword"
@@ -210,10 +219,9 @@ const AccountSetting = () => {
                                         </span>
                                     </div>
                                 </div>
-                                <div className="grid grid-cols-3">
-                                    <div className="bg-[#eee] flex justify-center items-center rounded px-3  pt-1 font-semibold dark:bg-[#1b2e4b] ltr:mr-2 rtl:ml-2">
-                                        <label htmlFor="NewPassword">New Password</label>
-                                    </div>
+
+                                <div>
+                                    <label htmlFor="NewPassword">New Password</label>
                                     <div className="relative text-white-dark">
                                         <input
                                             id="NewPassword"
@@ -228,10 +236,9 @@ const AccountSetting = () => {
                                         </span>
                                     </div>
                                 </div>
-                                <div className="grid grid-cols-3">
-                                    <div className="bg-[#eee] flex justify-center items-center rounded px-3 pt-1  font-semibold dark:bg-[#1b2e4b] ltr:mr-2 rtl:ml-2">
-                                        <label htmlFor="RetypePassword">Retype Password</label>
-                                    </div>
+
+                                <div>
+                                    <label htmlFor="RetypePassword">Confirm Password</label>
                                     <div className="relative text-white-dark">
                                         <input
                                             id="RetypePassword"
@@ -247,17 +254,18 @@ const AccountSetting = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex mt-3 pr-20 items-end ">
-                                {passwordMessage && <div className="text-green-500 m-4">{passwordMessage}</div>}
-                                {passwordError && <div className="text-red-500 m-4">{passwordError}</div>}
+                            <div className="flex mt-8 pr-20 items-end  ">
                                 <button type="submit" className="btn btn-primary">
                                     Save
                                 </button>
+                                {passwordMessage && <div className="text-green-500 ml-4">{passwordMessage}</div>}
+                                {passwordError && <div className="text-red-500 ml-4">{passwordError}</div>}
                             </div>
                         </form>
                     </div>
                 )}
-                {tabs === 'payment-details' && <PaymentDetails />}
+                {tabs === 'contact-us' && <ContactUsBoxed />}
+                {tabs === 'payment-details' && <Payment />}
                 {tabs === 'preferences' && <Preferences />}
                 {tabs === 'danger-zone' && <DangerZone />}
             </div>
