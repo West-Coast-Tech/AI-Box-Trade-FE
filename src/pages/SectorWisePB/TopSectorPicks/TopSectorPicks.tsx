@@ -136,7 +136,7 @@ const TopSectorPicks = () => {
                             title: 'Symbol',
                             sortable: true,
                             render: (record: any) => (
-                                <div className="flex justify-start items-center gap-x-2 cursor-pointer" onClick={(e) => navigate(`/pages/stocks/${record.symbol}`)}>
+                                <div className="flex justify-start items-center gap-x-2 cursor-pointer" onClick={(e) => navigate(`/stocks/${record.symbol}`)}>
                                     {symbols.find((symbol) => symbol.symbol === record.symbol) && (
                                         <div className="flex items-center gap-2">
                                             <img src={symbols.find((symbol) => symbol.symbol === record.symbol)?.iconUrl} alt={record.symbol} className="w-8 h-8 rounded-3xl" />

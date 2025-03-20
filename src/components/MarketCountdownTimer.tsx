@@ -25,7 +25,6 @@ const CountdownTimer: React.FC = () => {
                     Authorization: `Bearer ${BEARER_TOKEN}`,
                 },
             });
-            console.log('Market Cooldown', response);
             if (!response.ok) {
                 throw new Error('Failed to fetch market data');
             }

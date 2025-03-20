@@ -150,7 +150,7 @@ const StocksFilterPage = () => {
                             title: 'Symbol',
                             sortable: true,
                             render: (record: any) => (
-                                <div className="flex justify-start items-center gap-x-2 cursor-pointer" onClick={() => navigate(`/pages/stocks/${record.symbol}`)}>
+                                <div className="flex justify-start items-center gap-x-2 cursor-pointer" onClick={() => navigate(`/stocks/${record.symbol}`)}>
                                     {/* Stock icon & name */}
                                     {symbols.find((symbol) => symbol.symbol === record.symbol) && (
                                         <div className="flex items-center gap-2">

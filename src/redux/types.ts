@@ -29,7 +29,9 @@ export interface UserData {
     subType: string;
     favoriteSymbols: string[] | null;
     subscriptionPlan?: 'basic' | 'full';
-    subscriptionStatus?: 'trial' | 'active' | 'canceled' | 'expired';
+    subscriptionStatus?: 'trial' | 'active' | 'hold' | 'canceled' | 'expired';
+    trialEndsAt?: Date;
+    nextBillingDate?: Date;
 }
 
 // Error data interface

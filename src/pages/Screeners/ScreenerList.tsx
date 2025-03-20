@@ -57,7 +57,7 @@ const ScreenerList = () => {
                 <h3
                     className="text-lg font-semibold cursor-pointer"
                     onClick={() => {
-                        navigate('/pages/screeners/high_volume');
+                        navigate('/screeners/high_volume');
                     }}
                 >
                     {' '}
@@ -74,7 +74,7 @@ const ScreenerList = () => {
                             selectedTab === screener.name ? 'bg-gray-100 dark:bg-gray-800 text-primary' : 'hover:bg-gray-100 dark:hover:bg-gray-800'
                         }`}
                         onClick={() => {
-                            navigate(`/pages/screeners/${screener.name}`);
+                            navigate(`/screeners/${screener.name}`);
                         }}
                     >
                         <IconCaretsDown className="-rotate-90 mr-3 shrink-0 text-[#a38021]" />

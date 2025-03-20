@@ -26,7 +26,7 @@ const SearchSymbol: React.FC = () => {
     const handleItemClick = (symbol: string) => {
         setSearch(false); // Close the search dropdown
         setSearchTerm('');
-        navigate(`/pages/stocks/${symbol}`);
+        navigate(`/stocks/${symbol}`);
     };
 
     return (

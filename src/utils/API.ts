@@ -268,4 +268,24 @@ export default {
             }
         );
     },
+
+    cancelSubscription(userId: string, changeSubStatus: 'canceled'): Promise<AxiosResponse> {
+        return apiClient.post(
+            '/stripe/cancel-subscription',
+            { userId, changeSubStatus },
+            {
+                headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+            }
+        );
+    },
+
+    renewSubscription(userId: string, changeSubStatus: 'active'): Promise<AxiosResponse> {
+        return apiClient.post(
+            '/stripe/reactivate-subscription',
+            { userId, changeSubStatus },
+            {
+                headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+            }
+        );
+    },
 };

@@ -137,7 +137,7 @@ const DesignPortfolioTable: React.FC<DesignPortfolioTableProps> = ({ data, portf
                                 title: 'Symbol',
                                 sortable: true,
                                 render: (record: any) => (
-                                    <div className="flex justify-start items-center gap-x-2 cursor-pointer" onClick={() => navigate(`/pages/stocks/${record.ticker}`)}>
+                                    <div className="flex justify-start items-center gap-x-2 cursor-pointer" onClick={() => navigate(`/stocks/${record.ticker}`)}>
                                         {/* Stock icon & name */}
                                         {symbols.find((symbol) => symbol.symbol === record.ticker) && (
                                             <div className="flex items-center gap-2">

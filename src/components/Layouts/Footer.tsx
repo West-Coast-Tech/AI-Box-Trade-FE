@@ -20,12 +20,12 @@ const Footer = () => {
                     <div className="w-[60%]  py-10 rounded-lg">© {new Date().getFullYear()}. Stocks. All rights reserved.</div>
                 </div>
                 <div className="gap-4 flex flex-col lg:flex-row items-center">
-                    <NavLink to="/page/faq">Faq</NavLink>
-                    <NavLink to="/page/contact-us">Contact Us</NavLink>
-                    <NavLink to="/page/terms-conditions">Terms and Conditions</NavLink>
-                    <NavLink to="/page/privacy-policy">Privacy Policy</NavLink>
-                    <NavLink to="/page/refund-policy">Refund Policy</NavLink>
-                    <NavLink to="/page/risk-warning">Risk Warning</NavLink>
+                    <NavLink to="/faq">Faq</NavLink>
+                    <NavLink to="/contact-us">Contact Us</NavLink>
+                    <NavLink to="/terms-conditions">Terms and Conditions</NavLink>
+                    <NavLink to="/privacy-policy">Privacy Policy</NavLink>
+                    <NavLink to="/refund-policy">Refund Policy</NavLink>
+                    <NavLink to="/risk-warning">Risk Warning</NavLink>
                 </div>
             </div>
         </div>

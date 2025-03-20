@@ -48,7 +48,7 @@ const Finance = () => {
                                         <div
                                             className="ltr:mr-1 rtl:ml-1 flex items-center text-lg font-semibold  cursor-pointer  hover:scale-[1.02] transition-all duration-700"
                                             onClick={() => {
-                                                navigate(`/pages/stocks/${currentSymbol?.symbol}`);
+                                                navigate(`/stocks/${currentSymbol?.symbol}`);
                                             }}
                                         >
                                             <img width={40} src={currentSymbol?.iconUrl} className="p-1 mr-2 rounded-3xl" />

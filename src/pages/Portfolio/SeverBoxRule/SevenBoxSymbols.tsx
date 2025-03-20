@@ -19,7 +19,7 @@ export const SevenBoxSymbols: React.FC<SevenBoxSymbolsProps> = ({ symbolsData })
                                         key={index}
                                         className="w-full sm:w-full md:w-full lg:w-1/2 px-2 mb-4 flex cursor-pointer hover:scale-105 transition-transform duration-500"
                                         onClick={() => {
-                                            navigate(`/pages/stocks/${symbolData?.symbol}`);
+                                            navigate(`/stocks/${symbolData?.symbol}`);
                                         }}
                                     >
                                         <div className="border shadow-  shadow-xl bg-gray-300 rounded-lg p-4 w-full text-dark max-w-96">

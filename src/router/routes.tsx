@@ -81,34 +81,34 @@ const routes = [
 
     //Footer Pages
     {
-        path: '/page/faq',
+        path: '/faq',
         element: <Faq />,
         protected: false,
     },
     {
-        path: '/page/contact-us',
+        path: '/contact-us',
         element: <ContactUsBoxed />,
 
         protected: false,
     },
     {
-        path: '/page/terms-conditions',
+        path: '/terms-conditions',
         element: <TermsAndConditions />,
         protected: false,
     },
 
     {
-        path: '/page/privacy-policy',
+        path: '/privacy-policy',
         element: <PrivacyPolicy />,
         protected: false,
     },
     {
-        path: '/page/refund-policy',
+        path: '/refund-policy',
         element: <RefundPolicy />,
         protected: false,
     },
     {
-        path: '/page/risk-warning',
+        path: '/risk-warning',
         element: <RiskWarning />,
         protected: false,
     },
@@ -130,17 +130,17 @@ const routes = [
     },
     // Calendar pages
     {
-        path: '/pages/dividend-calendar',
+        path: '/dividend-calendar',
         element: <DividendCalendar />,
         protected: true,
     },
     {
-        path: '/pages/economic-calendar',
+        path: '/economic-calendar',
         element: <EcoEventCalendar />,
         protected: true,
     },
     {
-        path: '/pages/earnings-calendar',
+        path: '/earnings-calendar',
         element: <EarningsCalendar />,
         protected: true,
     },
@@ -168,158 +168,158 @@ const routes = [
     },
     //Sceeners Pages
     {
-        path: '/pages/gainers',
+        path: '/gainers',
         element: <Gainers />,
         protected: true,
     },
     {
-        path: '/pages/losers',
+        path: '/losers',
         element: <Losers />,
         protected: true,
     },
 
     {
-        path: '/pages/screeners/high_volume',
+        path: '/screeners/high_volume',
         element: <HighVolumeTable />,
         protected: false,
     },
     {
-        path: '/pages/screeners/hot_stocks',
+        path: '/screeners/hot_stocks',
         element: <HotStocksTable />,
         protected: false,
     },
     {
-        path: '/pages/screeners/top_under_10',
+        path: '/screeners/top_under_10',
         element: <TopUnderTenTable />,
         protected: false,
     },
     {
-        path: '/pages/screeners/dividend',
+        path: '/screeners/dividend',
         element: <DividendTable />,
         protected: false,
     },
     {
-        path: '/pages/screeners/top_fundamentals',
+        path: '/screeners/top_fundamentals',
         element: <TopFundamentalsTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/top_tech',
+        path: '/screeners/top_tech',
         element: <TopTechTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/j_pattern',
+        path: '/screeners/j_pattern',
         element: <JPatternTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/golden_cross',
+        path: '/screeners/golden_cross',
         element: <GoldenCrossTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/death_cross',
+        path: '/screeners/death_cross',
         element: <DeathCrossTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/consolidation',
+        path: '/screeners/consolidation',
         element: <ConsolidationTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/rsi_overbought',
+        path: '/screeners/rsi_overbought',
         element: <RsiOverboughtTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/rsi_oversold',
+        path: '/screeners/rsi_oversold',
         element: <RsiOversoldTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/52wk_toppicks',
+        path: '/screeners/52wk_toppicks',
         element: <FiftyTwoWeekTopPicksTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/penny_gap',
+        path: '/screeners/penny_gap',
         element: <PennyGapTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/defensive_stock',
+        path: '/screeners/defensive_stock',
         element: <DefensiveStockTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/income_growth',
+        path: '/screeners/income_growth',
         element: <IncomeGrowthTable />,
         protected: true,
     },
     {
-        path: '/pages/screeners/buy_longterm',
+        path: '/screeners/buy_longterm',
         element: <BuyLongtermTable />,
         protected: true,
     },
     //Portfolio Pages
     {
-        path: '/pages/portfolio/watch-list',
+        path: '/portfolio/watch-list',
         element: <WatchListPage />,
         protected: true,
     },
     {
-        path: '/pages/portfolio/user-holdings',
+        path: '/portfolio/user-holdings',
         element: <UserHoldingsPage />,
         protected: true,
     },
     {
-        path: '/pages/portfolio/seven-box-rule',
+        path: '/portfolio/seven-box-rule',
         element: <SevenBoxRulePage />,
         protected: false,
     },
     {
-        path: '/pages/portfolio/seven-box-rule/stocks',
+        path: '/portfolio/seven-box-rule/stocks',
         element: <RuleStockPage />,
         protected: true,
     },
     {
-        path: '/pages/portfolio/design',
+        path: '/portfolio/design',
         element: <DesignPortfolioPage />,
         protected: true,
     },
     //Sector wise stocks
     {
-        path: '/pages/portfolio/sector-stocks',
+        path: '/portfolio/sector-stocks',
         element: <TopSectorPicks />,
         protected: false,
     },
     {
-        path: '/pages/portfolio/analyst-ratings',
+        path: '/portfolio/analyst-ratings',
         element: <StockAnalystRating />,
         protected: true,
     },
     //Stocks Page
     {
-        path: '/pages/stocks/:symbol',
+        path: '/stocks/:symbol',
         element: <StockPage />,
         protected: false,
     },
     //Advance Search Stocks
     {
-        path: '/pages/stocks/advance-search',
+        path: '/stocks/advance-search',
         element: <StocksFilterPage />,
         protected: true,
     },
     //News Page
     {
-        path: '/pages/news',
+        path: '/news',
         element: <NewsPage />,
         protected: false,
     },
     {
-        path: '/pages/newslist',
+        path: '/newslist',
         element: <NewsList />,
     },
 
@@ -342,22 +342,22 @@ const routes = [
     },
 
     {
-        path: '/pages/error404',
+        path: '/error404',
         element: <ERROR404 />,
         layout: 'blank',
     },
     {
-        path: '/pages/error500',
+        path: '/error500',
         element: <ERROR500 />,
         layout: 'blank',
     },
     {
-        path: '/pages/error503',
+        path: '/error503',
         element: <ERROR503 />,
         layout: 'blank',
     },
     {
-        path: '/pages/maintenence',
+        path: '/maintenence',
         element: <Maintenence />,
         layout: 'blank',
     },

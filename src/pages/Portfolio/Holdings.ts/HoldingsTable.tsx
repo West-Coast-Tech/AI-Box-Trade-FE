@@ -110,7 +110,7 @@ const HoldingsTable: React.FC<HoldingsTableProps> = ({ holdings, setHoldings, sh
                         render: (record: any) => (
                             <div
                                 className="flex justify-start items-center gap-x-2 cursor-pointer hover:scale-105 transition-transform duration-500 font-bold"
-                                onClick={(e) => navigate(`/pages/stocks/${record.symbol}`)}
+                                onClick={(e) => navigate(`/stocks/${record.symbol}`)}
                             >
                                 {symbols.find((symbol) => symbol.symbol === record.symbol) && (
                                     <div className="flex items-center gap-2">

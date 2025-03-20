@@ -203,7 +203,7 @@ const WatchlistTable: React.FC = () => {
                         render: (record: any) => (
                             <div
                                 className="flex justify-start items-center gap-x-2 cursor-pointer hover:scale-105 transition-transform duration-500 font-bold"
-                                onClick={(e) => navigate(`/pages/stocks/${record.symbol}`)}
+                                onClick={(e) => navigate(`/stocks/${record.symbol}`)}
                             >
                                 {symbols.find((symbol) => symbol.symbol === record.symbol) && (
                                     <div className="flex items-center gap-2">
@@ -280,7 +280,7 @@ export default WatchlistTable;
 //         <div
 //             className="cursor-pointer hover:scale-105 transition-transform duration-500 font-bold"
 //             onClick={(e) => {
-//                 navigate(`/pages/stocks/${record.symbol}`);
+//                 navigate(`/stocks/${record.symbol}`);
 //             }}
 //         >
 //             {/* {record.symbol} */}
